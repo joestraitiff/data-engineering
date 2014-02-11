@@ -1,0 +1,27 @@
+== LivingSocial Challenge for Senior Software Engineer
+
+This is my (joestraitiff's) submission to the LivingSocial Big-Data Challenge
+for a Senior Software Engineer.
+
+It is a Rails 4.0 application running under ruby 2.0.0 using sqlite3 as a
+database.  I've also used thin for a webserver (webrick should be fine -- I 
+prefer thin for development) and used 'therubyracer' for the execjs runtime.  
+You can remove therubyracer from the gemfile if you already have node installed 
+(or prefer one of the other execjs runtimes).
+
+I moved the two files already in the project to the following locations:
+* example_input.tab moved to test/samples/example_input.tab for use in tests
+* README.markdown moved to DESIGN_SPEC.markdown so it won't be confused with this readme
+
+== Running the application
+1. Install ruby 2.0.0 using the method you prefer.  I developed this using
+ruby-2.0.0-p353 installed via rvm.  I setup a .ruby-version file so it should
+be directly compatible with rbenv.
+2. Install an execjs runtime.  I've included therubyracer in the Gemfile, but
+if you already have a runtime installed (e.g. node) you can comment it out or
+switch to your preferred runtime.
+3. Run bundler to setup the gems 'bundle' from the application directory
+4. Setup databases
+5. Run tests
+6. Startup application server by running 'rails s' and then browsing to "localhost:3000"
+7. Upload a file.  You can find a sample file in test/samples/example_input.tab
