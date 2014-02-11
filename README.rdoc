@@ -13,13 +13,13 @@ I moved the two files already in the project to the following locations:
 * example_input.tab moved to test/samples/example_input.tab for use in tests
 * README.markdown moved to DESIGN_SPEC.markdown so it won't be confused with this readme
 
-== Running the application
+=== Running the application
 1. Install ruby 2.0.0 using the method you prefer.  I developed this using
-ruby-2.0.0-p353 installed via rvm.  I setup a .ruby-version file so it should
-be directly compatible with rbenv.
+   ruby-2.0.0-p353 installed via rvm.  I setup a .ruby-version file so it should
+   be directly compatible with rbenv.
 2. Install an execjs runtime.  I've included therubyracer in the Gemfile, but
-if you already have a runtime installed (e.g. node) you can comment it out or
-switch to your preferred runtime.
+   if you already have a runtime installed (e.g. node) you can comment it out or
+   switch to your preferred runtime.
 3. Run bundler to setup the gems 'bundle' from the application directory
 4. Setup databases
 5. Run tests
