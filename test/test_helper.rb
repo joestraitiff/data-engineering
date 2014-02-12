@@ -13,3 +13,13 @@ class ActiveSupport::TestCase
 
   # Add more helper methods to be used by all tests here...
 end
+
+module Rack
+  module Test
+    class UploadedFile
+      def tempfile
+        @tempfile
+      end
+    end
+  end
+end

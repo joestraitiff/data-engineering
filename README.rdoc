@@ -20,8 +20,10 @@ I moved the two files already in the project to the following locations:
 2. Install an execjs runtime.  I've included therubyracer in the Gemfile, but
    if you already have a runtime installed (e.g. node) you can comment it out or
    switch to your preferred runtime.
-3. Run bundler to setup the gems 'bundle' from the application directory
-4. Setup databases
-5. Run tests
+3. Run bundler to setup the gems, i.e. 'bundle' from the application directory
+4. Setup databases.  Migrate development database 'rake db:migrate' then setup test database 
+   'rake db:test:load'
+5. Run tests 'rake test' to verify everything is setup correctly.  All tests should pass.
 6. Startup application server by running 'rails s' and then browsing to "localhost:3000"
-7. Upload a file.  You can find a sample file in test/samples/example_input.tab
+7. Upload a file.  You can find a sample file in test/samples/example_input.tab.  There is
+   also a sample file with invalid data in the same folder called bad_input.tab.

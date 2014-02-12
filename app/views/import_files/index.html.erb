@@ -1,0 +1,15 @@
+<% res = flash[:results] || {} %>
+<p id="notice"><%= notice %></p>
+
+<p>'<%= res[:file] %>' was imported representing <%= number_to_currency(res[:revenue]) %> total gross revenue.</p>
+<p><%= pluralize(res[:successful_rows], "row") %> were successfully imported into the database.</p>
+<% unless res[:error_rows].blank? %>
+  <p><%= pluralize(res[:error_rows].size, "row") %> had errors.</p>
+  <ul>
+    <% res[:error_rows].each do |r| %>
+      <li>Row <%= r[:row] %> had error '<%= r[:error] %>'</li>
+    <% end %>
+  </ul>
+<% end %>
+
+<%= link_to 'Import File', new_import_file_path %>

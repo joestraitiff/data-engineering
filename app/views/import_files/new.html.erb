@@ -1,0 +1,23 @@
+<h1>Import File</h1>
+
+<%= form_for(@import_file) do |f| %>
+  <% if @import_file.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@import_file.errors.count, "error") %> prohibited this import from ocurring:</h2>
+
+      <ul>
+      <% @import_file.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :file, 'File to import' %><br/>
+    <%= f.file_field :file %>
+  </div>
+  <div class="actions">
+    <%= f.submit 'Import File' %>
+  </div>
+<% end %>
